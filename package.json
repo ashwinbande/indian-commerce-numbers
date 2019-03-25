@@ -1,6 +1,6 @@
 {
   "name": "indian-commerce-numbers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Various Utilities for commerce applications of numbers.",
   "main": "index.js",
   "scripts": {
