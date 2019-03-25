@@ -140,4 +140,4 @@ const separate = function (number, obj) {
   return `${obj.prefix}${number.reverse().join('')}${decimal > 0 ? obj.decimalSymbol + decimal : ''}${obj.suffix}`;
 };
 
-module.export = { inWords, separate};
+module.exports = { inWords, separate};
