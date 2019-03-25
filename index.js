@@ -1,5 +1,5 @@
 'use strict';
-function inWords(number, obj) {
+const inWords = function (number, obj) {
   if (obj){
     obj.major_currency = obj.major_currency || 'Rupees';
     obj.minor_currency = obj.minor_currency || 'Paise';
@@ -112,8 +112,8 @@ function inWords(number, obj) {
   if (obj.textin === 'upper') return text.toUpperCase();
   else if (obj.textin === 'lower') return text.toLowerCase();
   else return text;
-}
-function separate(number, obj) {
+};
+const separate = function (number, obj) {
   if (obj){
     obj.suffix = obj.suffix || '';
     obj.prefix = obj.prefix || '';
@@ -138,6 +138,6 @@ function separate(number, obj) {
     index = index + obj.format[0] + 1;
   }
   return `${obj.prefix}${number.reverse().join('')}${decimal > 0 ? obj.decimalSymbol + decimal : ''}${obj.suffix}`;
-}
+};
 
-module.export = {inWords, separate};
+module.export = { inWords, separate};
