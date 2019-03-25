@@ -1,0 +1,19 @@
+{
+  "name": "indian-commerce-numbers",
+  "version": "1.0.0",
+  "description": "Various Utilities for commerce applications of numbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwinbande/indian-commerce-numbers.git"
+  },
+  "author": "ashwin bande",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashwinbande/indian-commerce-numbers/issues"
+  },
+  "homepage": "https://github.com/ashwinbande/indian-commerce-numbers#readme"
+}
