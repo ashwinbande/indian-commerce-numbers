@@ -38,7 +38,6 @@ All available options with defaults -
     prefix: '',
     separator: ',',
     textin: '',
-    initial: true,
   }
 ```
 for `textin` possible options are `upper` for UPPER CASE and `lower` for lower case. default is `''` for Title Case.

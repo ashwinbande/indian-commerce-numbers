@@ -10,6 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/ashwinbande/indian-commerce-numbers.git"
   },
+  "keywords": ["rupees", "paise", "words", "number", "to", "2", "words", "currency", "prefix", "suffix", "seperator",
+  "indian", "format"],
   "author": "ashwin bande",
   "license": "MIT",
   "bugs": {
