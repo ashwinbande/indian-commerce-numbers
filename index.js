@@ -85,13 +85,14 @@ const inWords = function (number, obj) {
           return `Eighty${text !== '' ? ' ' + text : '' }`;
         case 9:
           return `Ninty${text !== '' ? ' ' + text : '' }`;
+        case 10:
+          return `Zero${text !== '' ? ' ' + text : '' }`;
       }
     }
   }
-
-  number = number.toFixed(2);
-  let decimal = (number % 1).toFixed(2);
-  number = (number - decimal).toFixed(0);
+  const theNumber = Number(number);
+  number = Math.floor(theNumber + 0.000005);
+  let decimal = Number(((theNumber - number) * 100).toFixed(2)) % 100;
   let p21 = number % 100;
   let p3 = ((number - (number % 100)) / 100) % 10;
   let p54 = ((number - (number % 1000)) / 1000) % 100;
@@ -106,7 +107,7 @@ const inWords = function (number, obj) {
   if (p21) text = `${text} ${two_num(p21)}${obj.initial ? '' : obj.separator}`;
   if (obj.initial) text = `${text} ${number > 0 ? obj.major_currency : ''}`;
   if (number > 0 && decimal > 0) text = `${text} And`;
-  if (decimal > 0) text = `${text} ${two_num(decimal * 100)} ${obj.minor_currency ? obj.minor_currency : ''}`;
+  if (decimal > 0) text = `${text} ${two_num(decimal)} ${obj.minor_currency ? obj.minor_currency : ''}`;
   if (text !== '' && obj.initial === true) text = `${text} ${obj.suffix}`;
   if (obj.initial) text = `${obj.prefix}${text}`;
   if (obj.textin === 'upper') return text.toUpperCase();
